@@ -16,9 +16,26 @@
     
     <hr>
     
-    <p> User: <security:authentication property="principal.username" />
+    	<p> User: <security:authentication property="principal.username" />
     
-    <p> Role: <security:authentication property="principal.authorities" />
+    
+    
+    	<p> Role: <security:authentication property="principal.authorities" />
+   
+    
+    <hr>
+    <p>
+    	<security:authorize access="hasRole('MANAGER')">
+    		<a href="/Map/leaders">Leadership meeting.</a>
+   		</security:authorize>
+    </p>
+    <hr>
+    <p>
+    	<security:authorize access="hasRole('ADMIN')">
+    		<a href="/Map/systems">Admins Only .</a>
+    	 </security:authorize>
+    </p>
+    
     
     <!-- Add a logout button -->
 	<form:form action="/Map/logout" 

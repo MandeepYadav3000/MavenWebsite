@@ -11,5 +11,17 @@ public class AppController {
 		
 		return "index";
 	}
+	
+	@GetMapping("/leaders")
+	public String showLeaders() {
+		
+		return "leaders";
+	}
+	
+	@GetMapping("/systems")
+	public String showAdmin() {
+		
+		return "admin";
+	}
 
 }
